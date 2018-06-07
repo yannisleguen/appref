@@ -1,0 +1,6 @@
+2018-06-07 14:22:29,676 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-06-07 14:51:11,123 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.util.log - Logging initialized @1752987ms
+2018-06-07 14:51:11,557 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-06-07 14:51:11,815 [Safe X3 Studio HTTP server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@7daa4345{/,null,AVAILABLE}
+2018-06-07 14:51:11,856 [Safe X3 Studio HTTP server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@42181313{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-07 14:51:11,857 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - Started @1753721ms
