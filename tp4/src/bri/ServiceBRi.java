@@ -2,6 +2,8 @@ package bri;
 
 
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.*;
 
 
@@ -18,8 +20,33 @@ class ServiceBRi implements Runnable {
 			PrintWriter out = new PrintWriter (client.getOutputStream ( ), true);
 			out.println(ServiceRegistry.toStringue()+"##Tapez le numéro de service désiré :");
 			int choix = Integer.parseInt(in.readLine());
-			
 			// instancier le service numéro "choix" en lui passant la socket "client"
+			Class<?> service = ServiceRegistry.getServiceClass(choix);
+			
+			
+			try {
+				service.getConstructor().newInstance(client);
+			} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
+					| InvocationTargetException | NoSuchMethodException | SecurityException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				Method method = service.getMethod("run");
+				try {
+					method.invoke(null);
+				} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} catch (NoSuchMethodException | SecurityException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			
+			
 			// invoquer run() pour cette instance ou la lancer dans un thread à part 
 				
 			}
@@ -33,6 +60,7 @@ class ServiceBRi implements Runnable {
 	protected void finalize() throws Throwable {
 		 client.close(); 
 	}
+	
 
 	// lancement du service
 	public void start() {
