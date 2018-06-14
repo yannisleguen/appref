@@ -21,3 +21,84 @@
 2018-06-14 11:22:49,852 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2018-06-14 11:28:07,890 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2018-06-14 11:51:50,603 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-06-14 13:07:43,948 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
+2018-06-14 13:09:22,114 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-06-14 13:11:00,740 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.util.log - Logging initialized @109305ms
+2018-06-14 13:11:01,126 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-06-14 13:11:01,279 [Safe X3 Studio HTTP server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5e474091{/,null,AVAILABLE}
+2018-06-14 13:11:01,300 [Safe X3 Studio HTTP server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@6a1a27f6{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 13:11:01,301 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - Started @109869ms
+2018-06-14 13:11:01,312 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@6a1a27f6{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 13:11:01,317 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@5e474091{/,null,UNAVAILABLE}
+2018-06-14 13:11:42,794 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-06-14 13:12:09,152 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.util.log - Logging initialized @47777ms
+2018-06-14 13:12:09,286 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-06-14 13:12:09,442 [Safe X3 Studio HTTP server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@fdb8a2b{/,null,AVAILABLE}
+2018-06-14 13:12:09,454 [Safe X3 Studio HTTP server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@408b358c{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 13:12:09,455 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - Started @48079ms
+2018-06-14 15:59:56,001 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@408b358c{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 15:59:56,004 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@fdb8a2b{/,null,UNAVAILABLE}
+2018-06-14 16:00:13,408 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-06-14 16:00:14,439 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.util.log - Logging initialized @14248ms
+2018-06-14 16:00:14,643 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-06-14 16:00:16,674 [Safe X3 Studio HTTP server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@75e3e29a{/,null,AVAILABLE}
+2018-06-14 16:00:16,689 [Safe X3 Studio HTTP server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@42d820c1{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 16:00:16,689 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - Started @16493ms
+2018-06-14 16:37:19,693 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@42d820c1{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 16:37:19,693 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@75e3e29a{/,null,UNAVAILABLE}
+2018-06-14 16:37:39,480 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-06-14 16:37:40,809 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.util.log - Logging initialized @17065ms
+2018-06-14 16:37:40,989 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-06-14 16:37:42,259 [Safe X3 Studio HTTP server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@72d6004{/,null,AVAILABLE}
+2018-06-14 16:37:42,274 [Safe X3 Studio HTTP server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@14e6c7a5{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 16:37:42,278 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - Started @18549ms
+2018-06-14 16:38:53,391 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@14e6c7a5{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 16:38:53,395 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@72d6004{/,null,UNAVAILABLE}
+2018-06-14 16:39:13,516 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-06-14 16:39:14,890 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.util.log - Logging initialized @18447ms
+2018-06-14 16:39:15,015 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-06-14 16:39:15,267 [Safe X3 Studio HTTP server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@1cb4e1ef{/,null,AVAILABLE}
+2018-06-14 16:39:15,284 [Safe X3 Studio HTTP server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@7b526b01{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 16:39:15,285 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - Started @18842ms
+2018-06-14 16:44:20,661 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@7b526b01{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 16:44:20,667 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@1cb4e1ef{/,null,UNAVAILABLE}
+2018-06-14 16:44:44,839 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-06-14 16:44:46,073 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.util.log - Logging initialized @13970ms
+2018-06-14 16:44:46,214 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-06-14 16:44:46,589 [Safe X3 Studio HTTP server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3adcdb0b{/,null,AVAILABLE}
+2018-06-14 16:44:46,605 [Safe X3 Studio HTTP server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@4594b7dc{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 16:44:46,605 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - Started @14506ms
+2018-06-14 17:10:36,153 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@4594b7dc{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 17:10:36,153 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3adcdb0b{/,null,UNAVAILABLE}
+2018-06-14 17:11:19,106 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-06-14 17:11:20,466 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.util.log - Logging initialized @15213ms
+2018-06-14 17:11:20,606 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-06-14 17:11:21,122 [Safe X3 Studio HTTP server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@75de1536{/,null,AVAILABLE}
+2018-06-14 17:11:21,184 [Safe X3 Studio HTTP server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@f061392{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 17:11:21,184 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - Started @15923ms
+2018-06-14 17:23:43,515 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@f061392{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 17:23:43,531 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@75de1536{/,null,UNAVAILABLE}
+2018-06-14 17:23:59,158 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-06-14 17:24:00,611 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.util.log - Logging initialized @12638ms
+2018-06-14 17:24:00,783 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-06-14 17:24:02,955 [Safe X3 Studio HTTP server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@665a1298{/,null,AVAILABLE}
+2018-06-14 17:24:02,971 [Safe X3 Studio HTTP server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@2ff0fd89{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 17:24:02,971 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - Started @15010ms
+2018-06-14 17:32:09,286 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@2ff0fd89{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 17:32:09,286 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@665a1298{/,null,UNAVAILABLE}
+2018-06-14 17:32:23,648 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-06-14 17:32:25,504 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.util.log - Logging initialized @12894ms
+2018-06-14 17:32:25,756 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-06-14 17:32:26,651 [Safe X3 Studio HTTP server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@1e5fd77a{/,null,AVAILABLE}
+2018-06-14 17:32:26,668 [Safe X3 Studio HTTP server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@48d741a1{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 17:32:26,669 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - Started @14060ms
+2018-06-14 17:47:55,167 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@48d741a1{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 17:47:55,172 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@1e5fd77a{/,null,UNAVAILABLE}
+2018-06-14 17:48:20,416 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-06-14 17:48:21,749 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.util.log - Logging initialized @16347ms
+2018-06-14 17:48:21,876 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-06-14 17:48:22,456 [Safe X3 Studio HTTP server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@504e3fcb{/,null,AVAILABLE}
+2018-06-14 17:48:22,473 [Safe X3 Studio HTTP server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@20cd23f3{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 17:48:22,475 [Safe X3 Studio HTTP server] INFO  org.eclipse.jetty.server.Server - Started @17074ms
+2018-06-14 17:55:16,390 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@20cd23f3{HTTP/1.1,[http/1.1]}{0.0.0.0:5493}
+2018-06-14 17:55:16,393 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@504e3fcb{/,null,UNAVAILABLE}
