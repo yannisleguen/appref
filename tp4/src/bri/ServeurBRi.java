@@ -21,6 +21,7 @@ public class ServeurBRi implements Runnable {
 	// pour chaque connection, il cree un ServiceInversion, 
 	// qui va la traiter.
 	public void run() {
+		
 		try {
 			while(true)
 				new ServiceBRi(listen_socket.accept()).start();

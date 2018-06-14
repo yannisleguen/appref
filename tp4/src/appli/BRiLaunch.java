@@ -39,6 +39,7 @@ public class BRiLaunch {
 					String classeName = clavier.next();
 					Class<?> c = urlcl.loadClass(classeName);
 					ServiceRegistry.addService(c);
+					
 				} catch (Exception e) {
 					System.out.println(e);
 				}

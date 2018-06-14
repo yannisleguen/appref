@@ -21,35 +21,28 @@ class ServiceBRi implements Runnable {
 			out.println(ServiceRegistry.toStringue()+"##Tapez le numéro de service désiré :");
 			int choix = Integer.parseInt(in.readLine());
 			// instancier le service numéro "choix" en lui passant la socket "client"
-			Class<?> service = ServiceRegistry.getServiceClass(choix);
+			
+			Class<? extends Service> service = ServiceRegistry.getServiceClass(choix-1);
 			
 			
 			try {
-				service.getConstructor().newInstance(client);
+				service.getConstructor(Socket.class).newInstance(client).run();
+				
 			} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
 					| InvocationTargetException | NoSuchMethodException | SecurityException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				out.println("Constructor not instancied");
 			}
-			try {
-				Method method = service.getMethod("run");
-				try {
-					method.invoke(null);
-				} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			} catch (NoSuchMethodException | SecurityException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
 			
 			
 			
 			
 			// invoquer run() pour cette instance ou la lancer dans un thread à part 
 				
-			}
+			
+		}
 		catch (IOException e) {
 			//Fin du service
 		}
@@ -66,5 +59,6 @@ class ServiceBRi implements Runnable {
 	public void start() {
 		(new Thread(this)).start();		
 	}
+	
 
 }

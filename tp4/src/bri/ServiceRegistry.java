@@ -12,31 +12,44 @@ public class ServiceRegistry {
 	// un Vector pour cette gestion est pratique
 
 	static {
-		servicesClasses = new Vector<Class<?>>();
+		servicesClasses = new Vector<Class<? extends Service>>();
 	}
-	private static List<Class<?>> servicesClasses;
+	private static List<Class<? extends Service>> servicesClasses;
 
 // ajoute une classe de service après contrôle de la norme BLTi
 	public static void addService(Class<?> c) {
 		// vérifier la conformité par introspection
-		if (checkBRI(c)) {
-			// si conforme, ajout au vector
-			servicesClasses.add(c);
-		}else {
-			// si non conforme --> exception avec message clair
-			System.out.println("No BRI compliance, please make sure that "+c.getName()+": ");
-			System.out.println("implments BRI.Service");
-			System.out.println("Is not abstract");
-			System.out.println("Is Public");
-			System.out.println("As a publicconstructor (Socket) without any exception");
-			System.out.println("As an private final socket attribute");
-			System.out.println("As a public Static String toString() method");
-		}
+		try {
+			checkBRI(c);
+			servicesClasses.add((Class<? extends Service>) c);
+			System.out.println(c.getSimpleName()+"Has been added :-)");
 		
-	}
+			
+		} catch (Exception e) {
+			System.out.println(c.getName()+"Is Not BRI compliant, please make sure that the class :");
+			if (!implementBRIService(c)) {
+				System.out.println("implements BRI.Service");
+			} 
+			else if (!isNotAbstract(c)) {
+				System.out.println("Is not abstract");
+			}
+			else if (!isPublic(c)) {
+				System.out.println("Is Public");
+			}
+			else if (!hasAPublicSocketConstructor(c)) {
+				System.out.println("As a publicconstructor (Socket) without any exception");
+			}
+			else if (!hasAPrivateFinalSocketAttribute(c)) {
+				System.out.println("As a private final socket attribute");
+			}
+			else if (!hasAToStringMethode(c)) {
+				System.out.println("As a public Static String toString() method");
+			}
+		}
+}
 	
 private static boolean checkBRI(Class<?> c) {
-	if (implementBRIService(c) && isNotAbstract(c) && isPublic(c) && hasAPublicSocketConstructor(c)
+	if (implementBRIService(c)&&isNotAbstract(c) && isPublic(c) && hasAPublicSocketConstructor(c)
 			&& hasAPrivateFinalSocketAttribute(c) && hasAToStringMethode(c) ) {
 	return true;
 	} 
@@ -48,7 +61,7 @@ private static boolean checkBRI(Class<?> c) {
 private static boolean hasAToStringMethode(Class<?> c) {
 	Method[] methodTab = c.getMethods();
 	for (Method method : methodTab) {
-		if (method.getName().equals("toString")) {
+		if (method.getName().equals("toStringue")) {
 			return true;
 		}
 	}
@@ -100,23 +113,30 @@ private static boolean isNotAbstract(Class<?> c) {
 
 private static boolean implementBRIService(Class<?> c) {
 	
-	if (c.getSuperclass().isInterface() && c.getSuperclass().getSimpleName().equals("ServiceBRI")) {
-		return true;
+	Class<?>[] interfacesImplementees = c.getInterfaces();
+	for (Class<?> class1 : interfacesImplementees) {
+		if (class1.getName().equals("bri.Service")) {
+			return true;
+			}
 	}
 	return false;
+		
 }
 
 // renvoie la classe de service (numService -1)	
-	public static Class<?> getServiceClass(int numService) {
+	public static Class<? extends Service> getServiceClass(int numService) {
+		
 		return servicesClasses.get(numService);
 		
 	}
 	
 // liste les activités présentes
 	public static String toStringue() {
-		String result = "Activités présentes :##\n";
-		for (Class<?> class1 : servicesClasses) {
-			result += class1.getSimpleName() +"\n";
+		String result = "Activités présentes :##";
+		for (int i = 0; i<servicesClasses.size(); i++) {
+			int serviceNumber = i+1;
+			result += getServiceClass(i).getName()+"service numéro : "+serviceNumber+"##";
+			
 		}
 		return result;
 	}
