@@ -769,3 +769,12 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:1)
 	at org.eclipse.recommenders.internal.models.rcp.PrefetchModelArchiveJob.run(PrefetchModelArchiveJob.java:43)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-06-14 17:56:54.594
+!MESSAGE An internal error occurred during: "Polling news feeds".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.recommenders.internal.news.rcp.FeedDescriptors.getRegisteredFeeds(FeedDescriptors.java:54)
+	at org.eclipse.recommenders.internal.news.rcp.NewsRcpPreferences.getFeedDescriptors(NewsRcpPreferences.java:59)
+	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:54)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
