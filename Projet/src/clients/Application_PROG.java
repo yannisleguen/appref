@@ -31,11 +31,15 @@ class Application_PROG {
 		
 			System.out.println("Connecté au serveur " + s.getInetAddress() + ":"+ s.getPort());
 			String line;
+		
 			while(true){
 				line = sin.readLine();
 				System.out.println(line.replaceAll("##", "\n"));
 				sout.println(clavier.readLine());				
 			}
+			
+			
+			
 			
 		
 				

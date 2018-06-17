@@ -17,6 +17,7 @@ public class ServiceRegistry {
 	private static List<Class<? extends Service>> servicesClasses;
 
 // ajoute une classe de service après contrôle de la norme BLTi
+	@SuppressWarnings("unchecked")
 	public static void addService(Class<?> c) {
 		// vérifier la conformité par introspection
 		try {
@@ -29,8 +30,8 @@ public class ServiceRegistry {
 			System.out.println(c.getName()+"Is Not BRI compliant, please make sure that the class :");
 			if (!implementBRIService(c)) {
 				System.out.println("implements BRI.Service");
-			} 
-			else if (!isNotAbstract(c)) {
+			}
+			if (!isNotAbstract(c)) {
 				System.out.println("Is not abstract");
 			}
 			else if (!isPublic(c)) {
@@ -49,7 +50,7 @@ public class ServiceRegistry {
 }
 	
 private static boolean checkBRI(Class<?> c) {
-	if (implementBRIService(c)&&isNotAbstract(c) && isPublic(c) && hasAPublicSocketConstructor(c)
+	if (implementBRIService(c) && isNotAbstract(c) && isPublic(c) && hasAPublicSocketConstructor(c)
 			&& hasAPrivateFinalSocketAttribute(c) && hasAToStringMethode(c) ) {
 	return true;
 	} 
@@ -129,13 +130,8 @@ private static boolean implementBRIService(Class<?> c) {
 		return servicesClasses.get(numService);
 		
 	}
-	public static void removeClass (String classeName){
-		for (Class<? extends Service> class1 : servicesClasses) {
-			if (class1.getName() == classeName) {
-			
-				servicesClasses.remove(class1);
-			}
-		}
+	public static void removeClass (int index){
+		 servicesClasses.remove(index);
 	}
 	
 // liste les activités présentes

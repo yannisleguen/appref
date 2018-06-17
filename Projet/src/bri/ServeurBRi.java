@@ -26,12 +26,11 @@ public class ServeurBRi implements Runnable {
 			while(true)
 				if (listen_socket.getLocalPort() == 3000) {
 					new ServiceBRi_PROG(listen_socket.accept()).start();
-				}else{
-					new ServiceBRi_AMATEUR(listen_socket.accept()).start();
 				}
-					
-				
-		}
+				else if (listen_socket.getLocalPort() == 1998) {
+				new ServiceBRi_AMATEUR(listen_socket.accept()).start();
+			}
+				}
 		catch (IOException e) { 
 			try {this.listen_socket.close();} catch (IOException e1) {}
 			System.err.println("Pb sur le port d'écoute :"+e);

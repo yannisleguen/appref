@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/examples/ServiceInversion.java</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/apache-ftpserver-1.1.0/res/home/classes/examples/ServiceInversion.java</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

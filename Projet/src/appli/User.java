@@ -21,11 +21,11 @@ public class User {
 	}
 
 	public String getLogin() {
-		return login;
+		return this.login;
 	}
 
 	public String getPassWd() {
-		return passWd;
+		return this.passWd;
 	}
 	
 

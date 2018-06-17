@@ -24,8 +24,10 @@ class ServiceBRi_PROG implements Runnable {
 
 	public void run() {
 		User usr1 = new User("prog","prog" ,"ftp://localhost:2121/classes/");
+		User usr2 = new User("examples","examples","ftp://localhost:2121/classes");
 		
 		listUser.add(usr1);
+		listUser.add(usr2);
 		
 		try {BufferedReader in = new BufferedReader (new InputStreamReader(client.getInputStream ( )));
 			PrintWriter out = new PrintWriter (client.getOutputStream ( ), true);
@@ -33,11 +35,11 @@ class ServiceBRi_PROG implements Runnable {
 			String login, mdp;
 			User currentUser;
 			do{
-			out.println("Entrez le login :");
+			out.println("Entrez le login svp :");
 			login = in.readLine();
-			out.println("Entrez le mdp");
+			out.println("Entrez le mdp svp");
 			mdp = in.readLine();
-			}while(checkUserCredentials(login, mdp));			
+			}while(!checkUserCredentials(login, mdp));			
 			currentUser = getUser(login, mdp);
 			out.println(consigne());
 		
@@ -47,23 +49,24 @@ class ServiceBRi_PROG implements Runnable {
 			if (choix == 1) {
 				
 					out.println("Entrer la classe svp");
-					String classeName = in.readLine();
+					String classeName = currentUser.getLogin()+"."+in.readLine();
 					addService(classeName, currentUser);
 					out.println("La classe  a bien été ajoutée !");
 					
 				
 			}
 			else if (choix == 2){
-				
-					out.println("Entrer la classe svp");
-					String classeName = in.readLine();
-					updateService(classeName, currentUser);
+					out.println(ServiceRegistry.toStringue()+"##Tapez le numéro du service a maj :");
+					choix=Integer.parseInt(in.readLine());				
+					updateService(currentUser,choix);
 					out.println("La classe à bien été mise à jour !");
 					
 				
 				
 			}
-			/*else if (choix == 3){
+			else if (choix == 3){
+				
+				out.println("Merci d'entrer le nouvel URL ftp");
 				String newURL = in.readLine();
 				try {
 					changeFTP(currentUser, newURL);
@@ -72,7 +75,7 @@ class ServiceBRi_PROG implements Runnable {
 					// TODO: handle exception
 					out.println("Erreur, l'adresse n'est pas valide");
 				}
-			}*/
+			}
 	
 		}
 		catch (IOException e) {
@@ -97,14 +100,15 @@ class ServiceBRi_PROG implements Runnable {
 			
 		
 	
-	private void updateService(String classeName, User currentUser) {
-		ServiceRegistry.removeClass(classeName);
-		addService(classeName, currentUser);
+	private void updateService(User currentUser, int choice) {
+		String className =ServiceRegistry.getServiceClass(choice).getName();
+		ServiceRegistry.removeClass(choice);
+		addService(className, currentUser);
 		
 	}
 
 	protected void addService(String classeName, User usr){
-		String fileNameURL = "ftp://localhost:2121/classes/";
+		String fileNameURL = usr.getFtpAdress();
 		URLClassLoader urlcl = null;
 		try {
 			urlcl = URLClassLoader.newInstance(new URL[]{new URL(fileNameURL)});
@@ -125,16 +129,19 @@ class ServiceBRi_PROG implements Runnable {
 		
 	}
 	public Boolean checkUserCredentials(String login, String passWd){
-		for (User user : listUser) {
-			if (user.getLogin()==login && user.getPassWd() == passWd) {
+		for (int i = 0; i < listUser.size(); i++) {
+			if (listUser.get(i).getLogin().equals(login) && listUser.get(i).getPassWd().equals(passWd)) {
 				return true;
 			}
-		}	
+		}
+		/*for (User user : listUser) {
+			return (user.getLogin().equals(login) && user.getPassWd().equals(passWd)); 
+				}*/
 		return false;
 	}
 	public User getUser(String login, String passWd){
 		 for (User user : listUser) {
-			 if (user.getLogin()==login && user.getPassWd() == passWd) {
+			 if (user.getLogin().equals(login) && user.getPassWd().equals(passWd)) {
 				 return user;
 			 }
 		}
