@@ -24,7 +24,7 @@ class ServiceBRi_PROG implements Runnable {
 
 	public void run() {
 		User usr1 = new User("prog","prog" ,"ftp://localhost:2121/classes/");
-		User usr2 = new User("examples","examples","ftp://localhost:2121/classes");
+		User usr2 = new User("ylgn", "ylgn", "ftp://yleguen.com:2121/ylgn");
 		
 		listUser.add(usr1);
 		listUser.add(usr2);
@@ -42,14 +42,14 @@ class ServiceBRi_PROG implements Runnable {
 			}while(!checkUserCredentials(login, mdp));			
 			currentUser = getUser(login, mdp);
 			out.println(consigne());
-		
+			
 			int choix = Integer.parseInt(in.readLine());
 			
 			
 			if (choix == 1) {
 				
 					out.println("Entrer la classe svp");
-					String classeName = currentUser.getLogin()+"."+in.readLine();
+					String classeName = in.readLine();
 					addService(classeName, currentUser);
 					out.println("La classe  a bien été ajoutée !");
 					
@@ -101,8 +101,10 @@ class ServiceBRi_PROG implements Runnable {
 		
 	
 	private void updateService(User currentUser, int choice) {
-		String className =ServiceRegistry.getServiceClass(choice).getName();
-		ServiceRegistry.removeClass(choice);
+		String className =ServiceRegistry.getServiceClass(choice-1).getName();
+		
+		ServiceRegistry.removeClass(choice-1);
+		
 		addService(className, currentUser);
 		
 	}
@@ -126,7 +128,7 @@ class ServiceBRi_PROG implements Runnable {
 		ServiceRegistry.addService(c);
 	}
 	protected void changeFTP(User usr, String newURL){
-		
+		usr.setFtpAdress(newURL);
 	}
 	public Boolean checkUserCredentials(String login, String passWd){
 		for (int i = 0; i < listUser.size(); i++) {
